@@ -24,6 +24,58 @@
           "build/Microsoft.AspNetCore.OpenApi.targets": {}
         }
       },
+      "Microsoft.EntityFrameworkCore/10.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.5",
+          "Microsoft.EntityFrameworkCore.Analyzers": "10.0.5"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net10.0/Microsoft.EntityFrameworkCore.props": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/10.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/10.0.5": {
+        "type": "package"
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/10.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.5"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/10.0.0": {
         "type": "package",
         "build": {
@@ -35,7 +87,7 @@
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
-      "Microsoft.OpenApi/2.3.0": {
+      "Microsoft.OpenApi/2.4.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
@@ -48,13 +100,13 @@
           }
         }
       },
-      "Swashbuckle.AspNetCore/10.0.1": {
+      "Swashbuckle.AspNetCore/10.1.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "10.0.0",
-          "Swashbuckle.AspNetCore.Swagger": "10.0.1",
-          "Swashbuckle.AspNetCore.SwaggerGen": "10.0.1",
-          "Swashbuckle.AspNetCore.SwaggerUI": "10.0.1"
+          "Swashbuckle.AspNetCore.Swagger": "10.1.7",
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.1.7",
+          "Swashbuckle.AspNetCore.SwaggerUI": "10.1.7"
         },
         "build": {
           "build/Swashbuckle.AspNetCore.props": {}
@@ -63,10 +115,10 @@
           "buildMultiTargeting/Swashbuckle.AspNetCore.props": {}
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/10.0.1": {
+      "Swashbuckle.AspNetCore.Swagger/10.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.OpenApi": "2.3.0"
+          "Microsoft.OpenApi": "2.4.1"
         },
         "compile": {
           "lib/net10.0/Swashbuckle.AspNetCore.Swagger.dll": {
@@ -82,10 +134,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/10.0.1": {
+      "Swashbuckle.AspNetCore.SwaggerGen/10.1.7": {
         "type": "package",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "10.0.1"
+          "Swashbuckle.AspNetCore.Swagger": "10.1.7"
         },
         "compile": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
@@ -98,7 +150,7 @@
           }
         }
       },
-      "Swashbuckle.AspNetCore.SwaggerUI/10.0.1": {
+      "Swashbuckle.AspNetCore.SwaggerUI/10.1.7": {
         "type": "package",
         "compile": {
           "lib/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
@@ -133,6 +185,66 @@
         "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
         "microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore/10.0.5": {
+      "sha512": "9tNBmK3EpYVGRQLiqP+bqK2m+TD0Gv//4vCzR7ZOgl4FWzCFyOpYdIVka13M4kcBdPdSJcs3wbHr3rmzOqbIMA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore/10.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net10.0/Microsoft.EntityFrameworkCore.props",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.xml",
+        "microsoft.entityframeworkcore.10.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/10.0.5": {
+      "sha512": "32c58Rnm47Qvhimawf67KO9PytgPz3QoWye7Abapt0Yocw/JnzMiSNj/pRoIKyn8Jxypkv86zxKD4Q/zNTc0Ag==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.abstractions/10.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
+        "microsoft.entityframeworkcore.abstractions.10.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/10.0.5": {
+      "sha512": "ipC4u1VojgEfoIZhtbS2Sx5IluJTP/Jf1hz3yGsxGBgSukYY/CquI6rAjxn5H58CZgVn36qcuPPtNMwZ0AUzMg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.analyzers/10.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
+        "docs/PACKAGE.md",
+        "microsoft.entityframeworkcore.analyzers.10.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/10.0.5": {
+      "sha512": "zz4THzlDOrJ7fKU2YUOzQFs2LJ9DgOSr5xFXcDdoD59el73MTQLtQQOAJxQ94F4XDegyL9+2sePSQGdcU25ZxQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/10.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net10.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.10.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/10.0.0": {
@@ -395,10 +507,10 @@
         "tools/net462/netstandard.dll"
       ]
     },
-    "Microsoft.OpenApi/2.3.0": {
-      "sha512": "5RZpjyt0JMmoc/aEgY9c1vE5pusdDGvkPl9qKIy9KFbRiIXD+w7gBJxX+unSjzzOcfgRoYxnO4okZyqDAL2WEw==",
+    "Microsoft.OpenApi/2.4.1": {
+      "sha512": "u7QhXCISMQuab3flasb1hoaiERmUqyWsW7tmQODyILoQ7mJV5IRGM+2KKZYo0QUfC13evEOcHAb6TPWgqEQtrw==",
       "type": "package",
-      "path": "microsoft.openapi/2.3.0",
+      "path": "microsoft.openapi/2.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -409,28 +521,28 @@
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.2.3.0.nupkg.sha512",
+        "microsoft.openapi.2.4.1.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore/10.0.1": {
-      "sha512": "177+JNAV5TNvy8gLCdrcWBY9n2jdkxiHQDY4vhaExeqUpKrOqDatCcm/kW3kze60GqfnZ2NobD/IKiAPOL+CEw==",
+    "Swashbuckle.AspNetCore/10.1.7": {
+      "sha512": "vgef8DPT411JU5JjHiDbr0WOxsIVuAvegPGtqmm4Na4JRl/264dfBJcGkiPHsAr5P+Vda+qN1rZKRtBl1rF9aA==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore/10.0.1",
+      "path": "swashbuckle.aspnetcore/10.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Swashbuckle.AspNetCore.props",
         "buildMultiTargeting/Swashbuckle.AspNetCore.props",
         "docs/package-readme.md",
-        "swashbuckle.aspnetcore.10.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.10.1.7.nupkg.sha512",
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.Swagger/10.0.1": {
-      "sha512": "HJYFSP18YF1Z6LCwunL+v8wuZUzzvcjarB8AJna/NVVIpq11FH9BW/D/6abwigu7SsKRbisStmk8xu2mTsxxHg==",
+    "Swashbuckle.AspNetCore.Swagger/10.1.7": {
+      "sha512": "EjLibt/d/QuRv170GoihTbcPUpgzSFm2WKHhnGJFZQ03JYzfuitsM79azaAR8NBwRunU7yScSX6HRE5JUlrEMQ==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/10.0.1",
+      "path": "swashbuckle.aspnetcore.swagger/10.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -444,14 +556,14 @@
         "lib/net9.0/Swashbuckle.AspNetCore.Swagger.pdb",
         "lib/net9.0/Swashbuckle.AspNetCore.Swagger.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swagger.10.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.10.1.7.nupkg.sha512",
         "swashbuckle.aspnetcore.swagger.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/10.0.1": {
-      "sha512": "vMMBDiTC53KclPs1aiedRZnXkoI2ZgF5/JFr3Dqr8KT7wvIbA/MwD+ormQ4qf25gN5xCrJbmz/9/Z3RrpSofMA==",
+    "Swashbuckle.AspNetCore.SwaggerGen/10.1.7": {
+      "sha512": "PuubO9BjvNn6U3D9kLpuWKY1JtziWw7SsGBq0age1E50uQjQ8Fzl8s0EwzrLfANqYJNgDnJi9l7N1QxcGVB2Zw==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/10.0.1",
+      "path": "swashbuckle.aspnetcore.swaggergen/10.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -465,14 +577,14 @@
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swaggergen.10.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.10.1.7.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerUI/10.0.1": {
-      "sha512": "a2eLI/fCxJ3WH+H1hr7Q2T82ZBk20FfqYBEZ9hOr3f+426ZUfGU2LxYWzOJrf5/4y6EKShmWpjJG01h3Rc+l6Q==",
+    "Swashbuckle.AspNetCore.SwaggerUI/10.1.7": {
+      "sha512": "iJo3ODyUb/M8Vm8AH1r9y9iAba0w95xsCn3zFVl96ISRHbTDWxi+l7oFVCZqUEdjd97B8VMDPnMliWAdomR8uw==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/10.0.1",
+      "path": "swashbuckle.aspnetcore.swaggerui/10.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -486,7 +598,7 @@
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
         "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "package-readme.md",
-        "swashbuckle.aspnetcore.swaggerui.10.0.1.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.10.1.7.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     }
@@ -494,7 +606,9 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.OpenApi >= 10.0.5",
-      "Swashbuckle.AspNetCore >= 10.0.1"
+      "Microsoft.EntityFrameworkCore >= 10.0.5",
+      "Microsoft.EntityFrameworkCore.InMemory >= 10.0.5",
+      "Swashbuckle.AspNetCore >= 10.1.7"
     ]
   },
   "packageFolders": {
@@ -544,9 +658,17 @@
             "target": "Package",
             "version": "[10.0.5, )"
           },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[10.0.5, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[10.0.5, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "[10.0.1, )"
+            "version": "[10.1.7, )"
           }
         },
         "imports": [
@@ -568,7 +690,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
