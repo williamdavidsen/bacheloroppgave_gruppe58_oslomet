@@ -32,6 +32,7 @@ The API exposes dedicated endpoints for each module and one combined assessment 
 - `API/DTOs` contains request and response models
 - `API/DAL` contains data access and repository code
 - `Frontend/dashboard` contains the dashboard UI (React, TypeScript, Vite, Material UI)
+- `Test` contains backend unit/integration tests, frontend unit tests, E2E tests, manual test plans, and reports
 
 ## Running the project
 
@@ -69,6 +70,37 @@ OpenAPI JSON:
 
 ```text
 http://localhost:5052/swagger/v1/swagger.json
+```
+
+## Running tests
+
+Backend tests:
+
+```powershell
+dotnet test .\Test\API.UnitTests\API.UnitTests.csproj
+dotnet test .\Test\API.IntegrationTests\API.IntegrationTests.csproj
+```
+
+Frontend unit tests:
+
+```powershell
+cd Test\Frontend.UnitTests
+npm install
+npm test
+```
+
+End-to-end tests:
+
+```powershell
+cd Test\E2E
+npm install
+npm test
+```
+
+Optional batch validation against a running API:
+
+```powershell
+dotnet run --project .\Test\AssessmentBatchRunner\AssessmentBatchRunner.csproj -- http://localhost:5052 .\Test\AssessmentBatchRunner\domains.txt
 ```
 
 ## Notes
