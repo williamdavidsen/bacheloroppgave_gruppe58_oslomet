@@ -19,6 +19,12 @@ namespace SecurityAssessmentAPI.DAL.Repositories
             var entity = await _context.CheckTypes
                 .Include(ct => ct.CheckResults)
                 .FirstOrDefaultAsync(ct => ct.CheckTypeId == id);
+
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Check type with id {id} was not found.");
+            }
+
             return entity.ToDto();
         }
 
@@ -34,6 +40,12 @@ namespace SecurityAssessmentAPI.DAL.Repositories
         {
             var entity = await _context.CheckTypes
                 .FirstOrDefaultAsync(ct => ct.Code == code);
+
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Check type with code '{code}' was not found.");
+            }
+
             return entity.ToDto();
         }
 

@@ -19,6 +19,12 @@ namespace SecurityAssessmentAPI.DAL.Repositories
             var entity = await _context.Findings
                 .Include(f => f.CheckResult)
                 .FirstOrDefaultAsync(f => f.ReasonId == id);
+
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Finding with id {id} was not found.");
+            }
+
             return entity.ToDto();
         }
 

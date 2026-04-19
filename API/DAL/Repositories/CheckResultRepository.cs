@@ -21,6 +21,12 @@ namespace SecurityAssessmentAPI.DAL.Repositories
                 .Include(cr => cr.AssessmentRun)
                 .Include(cr => cr.Findings)
                 .FirstOrDefaultAsync(cr => cr.CheckResultId == id);
+
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Check result with id {id} was not found.");
+            }
+
             return entity.ToDto();
         }
 
@@ -50,6 +56,12 @@ namespace SecurityAssessmentAPI.DAL.Repositories
                 .Include(cr => cr.CheckType)
                 .Include(cr => cr.Findings)
                 .FirstOrDefaultAsync(cr => cr.RunId == runId && cr.CheckTypeId == checkTypeId);
+
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Check result for run {runId} and check type {checkTypeId} was not found.");
+            }
+
             return entity.ToDto();
         }
 

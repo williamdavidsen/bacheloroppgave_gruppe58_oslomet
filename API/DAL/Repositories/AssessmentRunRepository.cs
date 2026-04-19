@@ -22,6 +22,11 @@ namespace SecurityAssessmentAPI.DAL.Repositories
                     .ThenInclude(cr => cr.Findings)
                 .FirstOrDefaultAsync(ar => ar.RunId == id);
 
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Assessment run with id {id} was not found.");
+            }
+
             return entity.ToDto();
         }
 

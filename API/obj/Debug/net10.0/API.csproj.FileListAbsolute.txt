@@ -35,3 +35,7 @@ D:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\obj\Debug\net10.0\ref\AP
 d:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 d:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 d:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\global.json
+D:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+D:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Bacheloroppgave\bacheloroppgave_gruppe58_oslomet\API\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.InMemory.dll

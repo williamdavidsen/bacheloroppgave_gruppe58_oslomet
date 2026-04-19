@@ -20,6 +20,11 @@ namespace SecurityAssessmentAPI.DAL.Repositories
                 .Include(a => a.AssessmentRuns)
                 .FirstOrDefaultAsync(a => a.AssetId == id);
 
+            if (entity == null)
+            {
+                throw new KeyNotFoundException($"Asset with id {id} was not found.");
+            }
+
             return entity.ToDto();
         }
 

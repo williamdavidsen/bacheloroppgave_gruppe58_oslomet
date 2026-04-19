@@ -9,7 +9,6 @@ namespace SecurityAssessmentAPI.DAL
     {
         public static AssetDto ToDto(this Asset entity)
         {
-            if (entity == null) return null;
             return new AssetDto
             {
                 AssetId = entity.AssetId,
@@ -21,7 +20,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static Asset ToEntity(this AssetDto dto)
         {
-            if (dto == null) return null;
             return new Asset
             {
                 AssetId = dto.AssetId,
@@ -33,7 +31,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static AssessmentRunDto ToDto(this AssessmentRun entity)
         {
-            if (entity == null) return null;
             return new AssessmentRunDto
             {
                 RunId = entity.RunId,
@@ -49,7 +46,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static AssessmentRun ToEntity(this AssessmentRunDto dto)
         {
-            if (dto == null) return null;
             return new AssessmentRun
             {
                 RunId = dto.RunId,
@@ -65,7 +61,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static CheckTypeDto ToDto(this CheckType entity)
         {
-            if (entity == null) return null;
             return new CheckTypeDto
             {
                 CheckTypeId = entity.CheckTypeId,
@@ -76,7 +71,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static CheckType ToEntity(this CheckTypeDto dto)
         {
-            if (dto == null) return null;
             return new CheckType
             {
                 CheckTypeId = dto.CheckTypeId,
@@ -87,7 +81,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static CheckResultDto ToDto(this CheckResult entity)
         {
-            if (entity == null) return null;
             return new CheckResultDto
             {
                 CheckResultId = entity.CheckResultId,
@@ -104,7 +97,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static CheckResult ToEntity(this CheckResultDto dto)
         {
-            if (dto == null) return null;
             return new CheckResult
             {
                 CheckResultId = dto.CheckResultId,
@@ -120,7 +112,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static FindingsDto ToDto(this Finding entity)
         {
-            if (entity == null) return null;
             return new FindingsDto
             {
                 ReasonId = entity.ReasonId,
@@ -134,7 +125,6 @@ namespace SecurityAssessmentAPI.DAL
 
         public static Finding ToEntity(this FindingsDto dto)
         {
-            if (dto == null) return null;
             return new Finding
             {
                 ReasonId = dto.ReasonId,
