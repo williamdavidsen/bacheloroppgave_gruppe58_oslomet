@@ -612,7 +612,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saski\\.nuget\\packages\\": {}
+    "D:\\Bacheloroppgave\\bacheloroppgave_gruppe58_oslomet\\.dotnet-cli-home\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -620,7 +620,7 @@
       "projectUniqueName": "D:\\Bacheloroppgave\\bacheloroppgave_gruppe58_oslomet\\API\\API.csproj",
       "projectName": "API",
       "projectPath": "D:\\Bacheloroppgave\\bacheloroppgave_gruppe58_oslomet\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\saski\\.nuget\\packages\\",
+      "packagesPath": "D:\\Bacheloroppgave\\bacheloroppgave_gruppe58_oslomet\\.dotnet-cli-home\\.nuget\\packages\\",
       "outputPath": "D:\\Bacheloroppgave\\bacheloroppgave_gruppe58_oslomet\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [

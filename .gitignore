@@ -1,20 +1,64 @@
-bin/
-obj/
+# ------------------------------
+# Project-specific local config
+# ------------------------------
+API/appsettings.Local.json
 
+# ------------------------------
+# .NET build artifacts
+# ------------------------------
+**/bin/
+**/obj/
+
+# Test outputs / coverage
+TestResults/
+coverage/
+coverage.*
+*.coverage
+*.coveragexml
+
+# Node/Vite build artifacts
+node_modules/
+dist/
+build/
+
+# Local .NET SDK/CLI cache (created when DOTNET_CLI_HOME points to repo)
+.dotnet/
+.dotnet-cli-home/
+
+# ------------------------------
+# IDE and editor artifacts
+# ------------------------------
 .vs/
-.vscode/
 .idea/
-
-*.user
 *.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code local workspace storage
+.vscode/*.log
+
+# ------------------------------
+# Logs and temporary files
+# ------------------------------
 *.log
 *.tmp
 *.temp
 
-appsettings.Local.json
+# ------------------------------
+# OS-generated files
+# ------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-node_modules/
-dist/
-build/
-coverage/
-TestResults/
+# ------------------------------
+# Security / certificates
+# ------------------------------
+*.pfx
+*.snk
+
+# ------------------------------
+# Test runner output artifacts
+# ------------------------------
+Test/AssessmentBatchRunner/output/
