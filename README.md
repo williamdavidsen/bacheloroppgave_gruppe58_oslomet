@@ -31,10 +31,27 @@ The API exposes dedicated endpoints for each module and one combined assessment 
 - `API/Services` contains the core assessment logic and external service clients
 - `API/DTOs` contains request and response models
 - `API/DAL` contains data access and repository code
-- `Test/AssessmentBatchRunner` contains a small batch runner for testing many domains
-- `Frontend/dashboard` contains the optional dashboard UI (React, TypeScript, Vite, Material UI)
+- `Frontend/dashboard` contains the dashboard UI (React, TypeScript, Vite, Material UI)
 
 ## Running the project
+
+To run both the API and dashboard together, install the frontend dependencies once:
+
+```powershell
+cd Frontend\dashboard
+npm install
+```
+
+Then start the dev environment from the `Frontend` folder:
+
+```powershell
+cd ..
+npm run dev
+```
+
+The dev script starts the ASP.NET API on `http://localhost:5052` and Vite on `http://localhost:5173`. Vite proxies `/api` to `http://localhost:5052`; override the proxy target with `VITE_DEV_API_PROXY` in `Frontend/dashboard/.env.development` if needed.
+
+## Running the API only
 
 From the `API` folder:
 
@@ -53,8 +70,6 @@ OpenAPI JSON:
 ```text
 http://localhost:5052/swagger/v1/swagger.json
 ```
-
-With the API running, open `Frontend/dashboard`, run `npm install` once, then `npm run dev` (typically `http://localhost:5173`). Vite proxies `/api` to your backend in dev; override the target with `VITE_DEV_API_PROXY` in `Frontend/dashboard/.env.development` if needed.
 
 ## Notes
 

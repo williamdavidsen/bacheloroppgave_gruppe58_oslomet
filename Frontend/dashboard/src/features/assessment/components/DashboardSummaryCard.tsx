@@ -304,7 +304,42 @@ function PieBreakdownChart({
   const cx = size / 2
   const cy = size / 2
   const total = segments.reduce((sum, segment) => sum + segment.value, 0) || 1
-  let startAngle = -90
+  const chartSegments = segments.reduce<
+    Array<{
+      segment: DonutSegment
+      share: number
+      sharePercent: number
+      segmentStart: number
+      segmentEnd: number
+      midAngle: number
+      labelPoint: { x: number; y: number }
+      sweep: number
+    }>
+  >((items, segment) => {
+    const previousEnd = items.at(-1)?.segmentEnd ?? -90
+    const share = segment.included ? Math.max(0, segment.value) / total : 0
+    const sweep = share * 360
+    const segmentStart = previousEnd
+    const segmentEnd = segmentStart + sweep
+    const midAngle = segmentStart + sweep / 2
+    const labelRadius = (outerRadius + innerRadius) / 2
+    const labelPoint = polarPoint(midAngle, labelRadius)
+    const sharePercent = Math.round(share * 100)
+
+    return [
+      ...items,
+      {
+        segment,
+        share,
+        sharePercent,
+        segmentStart,
+        segmentEnd,
+        midAngle,
+        labelPoint,
+        sweep,
+      },
+    ]
+  }, [])
 
   function polarPoint(angleDeg: number, r: number): { x: number; y: number } {
     const rad = (angleDeg * Math.PI) / 180
@@ -337,17 +372,7 @@ function PieBreakdownChart({
       }}
     >
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={`Overall security score ${totalScore} out of ${maxScore}`}>
-        {segments.map((segment) => {
-          const share = segment.included ? Math.max(0, segment.value) / total : 0
-          const sweep = share * 360
-          const segmentStart = startAngle
-          const segmentEnd = startAngle + sweep
-          startAngle += sweep
-          const midAngle = segmentStart + sweep / 2
-          const labelRadius = (outerRadius + innerRadius) / 2
-          const labelPoint = polarPoint(midAngle, labelRadius)
-          const sharePercent = Math.round(share * 100)
-
+        {chartSegments.map(({ segment, sharePercent, segmentStart, segmentEnd, labelPoint, sweep }) => {
           if (!segment.included || sweep <= 0) return null
 
           return (

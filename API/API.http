@@ -1,6 +1,32 @@
-@API_HostAddress = http://localhost:5106
+@API_HostAddress = http://localhost:5052
+@Domain = example.com
 
-GET {{API_HostAddress}}/weatherforecast/
+GET {{API_HostAddress}}/api/assessment/check/{{Domain}}
+Accept: application/json
+
+###
+
+GET {{API_HostAddress}}/api/ssl/check/{{Domain}}
+Accept: application/json
+
+###
+
+GET {{API_HostAddress}}/api/headers/check/{{Domain}}
+Accept: application/json
+
+###
+
+GET {{API_HostAddress}}/api/email/check/{{Domain}}
+Accept: application/json
+
+###
+
+GET {{API_HostAddress}}/api/reputation/check/{{Domain}}
+Accept: application/json
+
+###
+
+GET {{API_HostAddress}}/api/pqc/check/{{Domain}}
 Accept: application/json
 
 ###
